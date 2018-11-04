@@ -10,7 +10,7 @@ import {NavController} from "ionic-angular";
     </ion-navbar>
   </ion-header>
     <ion-content>
-      <iframe src="https://player.vimeo.com/video/58115286?playsinline=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/58115286" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </ion-content>
   `
 
