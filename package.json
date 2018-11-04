@@ -10,11 +10,9 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint"
   },
-
-  "config":{
+  "config": {
     "ionic_copy": "./config/copy.config.js"
   },
-
   "dependencies": {
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
