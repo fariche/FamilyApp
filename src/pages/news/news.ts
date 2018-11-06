@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class NewsPage {
 
+  stream: string = "popular";
+
   constructor(public navCtrl: NavController) {
 
   }
