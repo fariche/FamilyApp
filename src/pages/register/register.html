@@ -1,5 +1,5 @@
 <ion-content class="bg-image no-scroll" padding>
-  <form class="form" [formGroup]="loginForm" (ngSubmit)="tryLogin(loginForm.value)">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="tryRegister(registerForm.value)">
     <img src="assets/img/logo-appstream.png" class="logo">
     <div>
       <ion-list class="list" inset>
@@ -20,17 +20,11 @@
     <p class="text" style="font-family: OpenSans; font-size: 14px; color: #ebebeb">Forgot your password?</p>
 
     <div text-center>
-      <button class="btnWidth" ion-button color="secondary" round>Login</button>
+      <button class="btnWidth" ion-button color="secondary" round>Register</button>
     </div>
     <label class="error-message">{{errorMessage}}</label>
 
-    <div text-center>
-      <button class="myButton" ion-button color="myWhite" (click)="goRegisterPage()" round outline>Sign Up</button>
-    </div>
   </form>
 
 
-  <img src="assets/img/facebook.png" (click)="tryFacebookLogin()" class="fb-button">
-
-  <img src="assets/img/twitter.png" (click)="tryFacebookLogin()" class="twitter-button">
 </ion-content>

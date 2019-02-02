@@ -26,9 +26,15 @@
     <img src="assets/img/bg2.jpg">
 
     <div class="header-social">
-      <img style="width:18%; margin-right:3vw" src="assets/img/love-btn.png">
+      <img style="width:18%; margin-right:6vw" src="assets/img/love-btn.png">
 
-      <img style="width:40%; margin-right:3vw" src="assets/img/friend-btn.png">
+      <button style="color:#0091ea;margin-top:-1.5vh;margin-left:34vh;margin-top:-14vh" ion-button round outline medium (click)="openImagePickerCrop()">
+        Upload
+      </button>
+      <!--When cloud is pressed, profile picture can be changed      -->
+      <!--<ion-icon style="font-size: 60px; color: blue; margin-right:3vw" name="cloud-upload" (click)="openImagePickerCrop()"></ion-icon>-->
+      <label class="error-message">{{picMessage}}</label>
+
 
       <img style="width:18%; margin-left:3vw" src="assets/img/chat-btn.png">
     </div>

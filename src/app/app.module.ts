@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import {NgModule, ErrorHandler} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -16,6 +16,17 @@ import {VimeoVideo} from "../pages/videos/vimeo";
 import {YoutubeVideo} from "../pages/videos/youtube";
 import {ParallaxHeaderDirective} from "../directives/parallax-header/parallax-header";
 import {ProfilePage} from "../pages/profile/profile";
+import {AuthService} from "../pages/core/auth.service";
+import {AngularFireAuth, AngularFireAuthModule} from 'angularfire2/auth';
+import {environment} from "../environment/environment";
+import {AngularFireModule} from '@angular/fire';
+
+import { Facebook } from '@ionic-native/facebook';
+import {RegisterPage} from "../pages/register/register";
+import {ImagePicker} from "@ionic-native/image-picker";
+import {Crop} from "@ionic-native/crop";
+// import { GooglePlus } from '@ionic-native/google-plus';
+// import { TwitterConnect } from '@ionic-native/twitter-connect';
 
 @NgModule({
   declarations: [
@@ -29,11 +40,14 @@ import {ProfilePage} from "../pages/profile/profile";
     VimeoVideo,
     YoutubeVideo,
     ParallaxHeaderDirective,
-    ProfilePage
+    ProfilePage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,12 +60,19 @@ import {ProfilePage} from "../pages/profile/profile";
     LoginPage,
     VimeoVideo,
     YoutubeVideo,
-    ProfilePage
+    ProfilePage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth,
+    AuthService,
+    Facebook,
+    ImagePicker,
+    Crop
+    // TwitterConnect
   ]
 })
 export class AppModule {}
